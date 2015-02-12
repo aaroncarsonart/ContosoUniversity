@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ContosoUniversity.Models.Enrollment>
+
+@{
+    ViewBag.Title = "Enrollments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Course Title
+        </th>
+        <th>
+            Student Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EnrollmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EnrollmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EnrollmentID })
+        </td>
+    </tr>
+}
+
+</table>

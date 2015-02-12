@@ -1,0 +1,492 @@
+﻿
+@{
+    ViewBag.Title = "CoolStuff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cool Things I've Added</h1>
+<p>
+    Select a tab below to read about what I've done for each Tutorial!
+</p>
+<!-- ========================================================================================= -->
+<!-- TABS!!! -->
+<!-- ========================================================================================= -->
+
+    <!-- tabs -->
+
+    <div class="tabbable">
+        <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab9" data-toggle="tab">Tutorial 12</a>
+            </li>
+            <li>
+                <a href="#tab8" data-toggle="tab">Tutorial 11</a>
+            </li>
+            <li>
+                <a href="#tab7" data-toggle="tab">Tutorial 10</a>
+            </li>
+            <li>
+                <a href="#tab6" data-toggle="tab">Tutorial 9</a>
+            </li>
+            <li>
+                <a href="#tab5" data-toggle="tab">Tutorial 8</a>
+            </li>
+            <li>
+                <a href="#tab4" data-toggle="tab">Tutorial 7</a>
+            </li>
+            <li>
+                <a href="#tab3" data-toggle="tab">Tutorial 6</a>
+            </li>
+            <li>
+                <a href="#tab2" data-toggle="tab">Tutorial 5</a>
+            </li>
+            <li>
+                <a href="#tab1" data-toggle="tab">Tutorial 4</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 12
+            <!-- ========================================================================================= -->
+            <div class="tab-pane active" id="tab9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 12</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Advanced EF 6 Scenarios</h4>
+                        <p>
+                            I have done it, I ran the gauntlet!  Tutorial 12 put a lot in perspective 
+                            for me.  I have to say I was beginning to wonder if I could run raw SQL
+                            queries with the ASP.NET MVC architecture.  However, I do see the benefit
+                            of LINQ and lazy loading in that it decouples my application logic from
+                            the SQL syntax, and makes changing my database implementation far simpler.
+                        </p>
+                        <p>
+                            I updated components of Course and Department as shown in Tutorial 12.
+                            I am especially tickled by the dropdown menu placed in Department to filter
+                            the data.  That simple example gives me many ideas of how to streamline
+                            an index view and wll certainly help with the final project.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>
+                         TBA
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 11
+            <!-- ========================================================================================= -->
+            <div class="tab-pane" id="tab8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 11</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Inheritance</h4>
+                        <p>
+                            I added Inheritance to the project, having Student and Instructor both inherit
+                            from a shared parent class "Person," using the TPH <em>(table per hierarchy)</em> inheritance.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>
+                            Personally, I cannot stand the design table per hierarchy inheritance.
+                            I learned early on in CS 161/CS 162 that you shouldn't include fields
+                            that are only included half of the time; that in reality, it should
+                            be divided into two different objects.  I get that his is a file storage
+                            method and that there are reasons for this with efficiency; it just rubs
+                            me the wrong way.  I would probably choose Table-Per-Concrete Type if i 
+                            were to select one for another project.
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 10
+            <!-- ========================================================================================= -->
+            <div class="tab-pane" id="tab7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 10</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Concurrency</h4>
+                        <p>
+                            I have implemented the "Store Wins" Concurrency conflict resolution strategy as
+                            described in Tutorial 10.  The rowversion column seems like a good, lightweight
+                            solution to solvign concurrency issues.  Also, I am getting more used to using
+                            migrations to use a different schema in my same azure db when beginning a new
+                            tutorial for the remainder of these tutorials.  The benefit here is it is really
+                            easy to re-initialize my DB and add changes while not breaking the previous tutorials,
+                            nor is Azure breaking my wallet.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>
+                            Department has been properly updated so that if you are to open two simultaneous tabs
+                            and try to execute an edit or delete after having executed an edit or delete for that
+                            same row, the application will report to the user that another user has modified the 
+                            data, and confirm if changes are still desired to be applied.
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+    
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 9
+            <!-- ========================================================================================= -->
+            <div class="tab-pane" id="tab6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 9</h3>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h4>Overview</h4>
+                        <p>
+                            Tutorial 9 was simple but I realize its importance.  To be able to use asynchronous
+                            code means my project will be more scalable, and I intend on using this for the
+                            term project.  The stored procedures look interesting as well, I want to look into
+                            how to use those more effectively and creatively.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 8
+            <!-- ========================================================================================= -->
+            <div class="tab-pane" id="tab5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 8</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Overview</h4>
+                        <p>
+                            Tutorial 8 appeared to be much more of a challenge than it turned out to be in
+                            implementation.  Completing this tutorial has given me even more ideas about
+                            how to complete my Team Final Project.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Default Values in Create/Edit Views</h4>
+
+                        <p>
+                            I enabled the Create and Edit views for Course and Student to display the current
+                            date as a default value in the EnrollmentDate and HireDate fields by modifying their
+                            Controller classes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 7
+             <!-- ========================================================================================= -->
+            <div class="tab-pane" id="tab4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 7</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Overview</h4>
+                        <p>
+                            I really enjoyed Tutorial 7.  I think it is most valuable to be able to display
+                            the related entity data all on the same page.  Also, learning more about LINQ and
+                            the lamda expressions and how they can integrate with the Razor view proved to be
+                            time consuming.
+                        </p>
+                        <p>
+                            In addition to showing related data for Instructors, I also built in similar
+                            functionality for Departments.  If you select a Department in the Department's
+                            view, it shows all Courses that belong to that Department.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Additions</h4>
+
+                        <p>
+                            On a minor note, I learned how to show the selected Department name for the header
+                            of the secondary table, rather than a generic message. So, instead of reading
+                            <em>"Courses belonging to Selected Department"</em>, it instead reads <em>
+                                "Mathematics
+                                Courses"
+                            </em>, etc (depending on which Department was selected).  I also added this to
+                            the Instructor View so the headers will say <em>"Roger Harui's courses"</em> or
+                            <em>"Students enrolled in Chemistry"</em>, etc.
+                        </p>
+                        <pre class="line-numbers"><code class="language-csharp">&lt;h2>
+    &#64;{
+        string s = Model.Courses.Where(
+            i => i.CourseID == ViewBag.CourseID)
+            .Single().Title;
+        &#64;Html.Raw("Students enrolled in " + s);
+    }
+&lt;/h2></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 6
+            <!-- ========================================================================================= -->
+            <div class="tab-pane" id="tab3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Tutorial 6</h3>
+                        <p>
+                            For Tutorial 6 I completed the entire Complex data model, including Instructor,
+                            Department, OfficeAssignment, etc.  I also learned about how the Data Annotations
+                            worked, and did some custom data annotations, such as adding a popup-calendar
+                            to the Student View, or having the date format be mm-dd-yyyy instead of year coming
+                            first.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Extra Views</h4>
+                        <p>
+                            I went ahead and created views for all the Models that it made sense to create
+                            views for, so I can show that I actually completed the work required.  I also
+                            stuffed the View hyperlinks all into a drop-down menu so I could clean up the navbar
+                            (it was starting to look a little cluttered).
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>More CSS Editing</h4>
+                        <p>
+                            I have continued to tweak the layout and CSS of the website.  I'm trying to learn
+                            more about Bootstrap, and I understand the role of the various components a little
+                            more now.  Specific changes include setting the dropdown menu for Views and
+                            setting it's colors, as well as changing the layout of this page to use tabs to
+                            organize the data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 5
+            <!-- ========================================================================================= -->
+            <div class="tab-pane row" id="tab2">
+                <div class="col-md-12">
+                    <h3>Tutorial 5</h3>
+                    <p>
+                        This project's database was created using code-first
+                        migrations to create a new database on my azure account
+                        after publishing the website, following the instructions in
+                        <a class="customlink" href="http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application">Tutorial 5</a>.
+                    </p>
+                    <p>
+                        I also changed my database contents to more closely match
+                        the Tutorial's default entries, meaning the Student, Course, and
+                        Enrollment entities have different values between Tutorial 4 and
+                        Tutorial 5.  This was so I could focus on learning how the
+                        code-first approach worked, rather than meticulously changing each
+                        entry in the seed method to match what I previously had.
+                    </p>
+                </div>
+
+                <div class="col-md-12">
+                    <h3>Syntax Highlighting</h3>
+                </div>
+
+                <!-- ============================================================================ -->
+                <!-- http://hilite.me/ -->
+                <!-- ============================================================================ -->
+                <div class="col-md-6">
+                    <h3><a class="customlink" href="http://hilite.me/">Hilite</a></h3>
+                    <p>
+                        Here is an example of code formatted with Hilite's "fuity" theme:
+                    </p>
+                    <p>
+                        <br />
+                        <!-- HTML generated using hilite.me -->
+                        <div id="roundedsection" style="background: #111111; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 125%; background: #111111; border: #111111"><span style="color: #fb660a; font-weight: bold">using</span> <span style="color: #ffffff">System;</span>
+<span style="color: #fb660a; font-weight: bold">namespace</span> <span style="color: #ffffff">HelloWorld</span>
+<span style="color: #ffffff"> {</span>
+<span style="color: #008800; font-style: italic;">    /**</span>
+<span style="color: #008800; font-style: italic;">     * This is a multi-line comment.</span>
+<span style="color: #008800; font-style: italic;">     */</span>
+<span style="color: #fb660a; font-weight: bold">    public</span> <span style="color: #fb660a; font-weight: bold">class</span> <span style="color: #ffffff">Hello</span>
+<span style="color: #ffffff">    {</span>
+<span style="color: #fb660a; font-weight: bold">        static</span> <span style="color: #fb660a; font-weight: bold">void</span> <span style="color: #ff0086; font-weight: bold">Main</span><span style="color: #ffffff">()</span>
+<span style="color: #ffffff">        {</span>
+<span style="color: #008800; font-style: italic;">            // This is a single line comment.</span>
+<span style="color: #ffffff">            Console.WriteLine(</span><span style="color: #0086d2">&quot;Hello, World.&quot;</span><span style="color: #ffffff">);</span>
+<span style="color: #ffffff">        }</span>
+<span style="color: #ffffff">    }</span>
+<span style="color: #ffffff">}</span>
+</pre>
+                        </div>
+                        <br />
+                    </p>
+                    <p>
+                        I researched various methods to use CSS styling to render
+                        syntax-highlighted code. I found two methods: one is a form
+                        of in-line highlighting from
+                        <a class="customlink" href="http://hilite.me/">hilite.me</a>.
+                        This requires no additional css and is all done in line.
+                        You just paste the code you want formatted into their dialog
+                        box and they give you the HTML with in-line CSS formatting,
+                        for quick and easy changes.
+                    </p>
+                    <p>
+                        Minor tweaks may be needed to override possible conflicts with
+                        the bootstrap.css file of an MVC application. In my case, I had
+                        to specify the backround and line color of the &lt;pre&gt; element
+                        to ensure it was all dark grey, due to a conflict with my other
+                        code-formatting technique, discussed next.
+                    </p>
+                </div>
+
+
+                <!-- ============================================================================ -->
+                <!-- http://prismjs.com/ -->
+                <!-- ============================================================================ -->
+                <div class="col-md-6">
+                    <h3><a class="customlink" href="http://prismjs.com/">Prism</a></h3>
+                    <p>
+                        Here is an example of code formatted with Prism's "Coy" theme:
+                    </p>
+                    <p>
+                        <br />
+<pre class="line-numbers"><code class="language-csharp">using System;
+namespace HelloWorld
+{
+    /**
+     * This is a multi-line comment.
+     */
+    public class Hello
+    {
+        static void Main()
+        {
+            // This is a single line comment.
+            Console.WriteLine("Hello, World.");
+        }
+    }
+}</code></pre>
+                        <br />
+                    </p>
+                    <p>
+                        I found an even better way of styling code that requires slightly
+                        more overhead.  <a class="customlink" href="http://prismjs.com/">Prism</a>
+                        requires you add their files prism.js and prism.css to your project, but
+                        afterwards displaying formatted code is far more intuitive and easily extendible.
+                    </p>
+                    <p>
+                        After selecting what features you want for the highlighting, you must
+                        download the prism.js and prism.css files.  The file prism.js is placed
+                        in the "~/Scripts" folder, and prism.css must be placed in "~/Content".
+                        Also, you must update the method
+                        <code class="language-csharp">public static void RegisterBundles(BundleCollection bundles)</code>
+                        in "~/App_Start/BundleConfig.cs" and make sure that the new script and
+                        stylesheet are used in "~/Views/Shared/_Layout.cshtml".  If all works
+                        well, you place code to highlight in a code tag, or pre and code for
+                        multi-line code, like this:
+                    </p>
+                    <p>
+<pre class="line-numbers"><code class="language-markup">&lt;pre class="line-numbers"&gt;&lt;code class="language-markup"&gt;
+    &lt;!-- Your code here --&gt;
+&lt;/pre &gt;&lt;/code&gt;</code></pre>
+                    </p>
+                </div>
+            </div>
+
+            <!-- ========================================================================================= -->
+            <!-- Tutorial 4
+            <!-- ========================================================================================= -->
+            <div class="tab-pane row" id="tab1">
+                <div class="col-md-4">
+                    <h3>Tutorial 4</h3>
+                    <p>
+                        I added new fields to the Student and Course entities,
+                        which are viewable on their prospective pages.  They
+                        are also viewable and/or editable in the create, edit,
+                        and details pages.
+                    </p>
+                    <p>
+                        I added a constructor for SchoolInterceptorTransientErrors
+                        that allowed me to pass in any keyword to generate the errors,
+                        and also the error code passed, instead of just hard-coding
+                        the values.  This way, I can check multiple kinds of errors:
+                    </p>
+                    <p>
+                        <div id="roundedsection" style="background: #111111; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 125%; background: #111111; border: #111111"><span style="color: #ffffff">DbInterception.Add(</span> <span style="color: #fb660a; font-weight: bold">new</span> <span style="color: #ffffff">SchoolInterceptorTransientErrors(</span><span style="color: #0086d2">&quot;Throw&quot;</span><span style="color: #ffffff">,</span> <span style="color: #0086f7; font-weight: bold">20</span><span style="color: #ffffff">));</span></pre>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>HTML and CSS</h3>
+                    <p>
+                        In addition to the changes required for Tutorial 4,
+                        I added many changes to the _Layout.cshtml
+                        file that modified various attributes by adding custom
+                        classes.  Then, in the Site.css file I added
+                        new styles for those classes.
+                    </p>
+                    <p>
+                        I learned about HTML and CSS from Code Academy.  I would
+                        recommend anyone with interest in learning the basics to
+                        follow their tutorials; it only takes a few hours and
+                        helped me understand the basics of the markup languages.
+                    </p>
+                    <p><a class="btn btn-default" href="http://www.codeacademy.com">Checkout Code Academy &raquo;</a></p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Fancy Gradients</h3>
+                    <p>
+                        See the gradients used in the jumbotron, background, and
+                        navbar?  These were accomplished with custom CSS styling
+                        in the declaration block of a custom id selector
+                        ".VerticalGradient".  I modified the tag of an element I wanted
+                        to change like this:
+                    </p>
+                    <p>
+                        <br />
+                        <div id="roundedsection" style="background: #111111; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 125%; background: #111111; border: #111111"><span style="color: #fb660a; font-weight: bold">&lt;div</span> <span style="color: #ff0086; font-weight: bold">id=</span><span style="color: #0086d2">&quot;VerticalGradient&quot;</span> <span style="color: #fb660a; font-weight: bold">&gt;</span>
+<span style="color: #008800; font-style: italic; background-color: #0f140f">    &lt;!-- your code here --&gt;</span>
+<span style="color: #fb660a; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+                        </div>
+                        <br />
+                    </p>
+                    <p><a class="btn btn-default" href="http://css-tricks.com/examples/CSS3Gradient/">Code Examples &raquo;</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>

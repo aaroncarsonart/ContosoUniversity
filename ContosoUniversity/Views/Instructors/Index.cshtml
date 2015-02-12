@@ -1,0 +1,142 @@
+﻿@model ContosoUniversity.ViewModels.InstructorIndexData
+
+@{
+    ViewBag.Title = "Instructors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Last Name</th>
+        <th>First name</th>
+        <th>Hire Date</th>
+        <th>Office</th>
+        <th>Courses</th>
+        <th></th>
+    </tr>
+
+    @foreach (var instructor in Model.Instructors) 
+    {
+        string selectedRow = "";
+        if (instructor.ID == ViewBag.InstructorID)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>@Html.DisplayFor(i => instructor.LastName)</td>
+            <td>@Html.DisplayFor(i => instructor.FirstMidName)</td>
+            <td>@Html.DisplayFor(i => instructor.HireDate)</td>
+            <td>
+                @if (instructor.OfficeAssignment != null)
+                {
+                    @instructor.OfficeAssignment.Location
+                }
+                else
+                {
+                    @Html.Value("none")
+                }
+            </td>
+            <td>
+                @{
+                    foreach (var course in instructor.Courses)
+                    {
+                        @course.CourseID @: @course.Title <br />
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Select", "Index", new { id = instructor.ID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = instructor.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = instructor.ID }) |
+                @Html.ActionLink("Delete", "Index", new { id = instructor.ID }) 
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<!-- ******************************************************* -->
+<!-- Show the Courses from the instructor -->
+<!-- ******************************************************* -->
+@if (Model.Courses != null)
+{
+    <h3>
+        @{
+            string first = Model.Instructors.Where(i => i.ID == ViewBag.InstructorID).Single().FirstMidName;
+            string second = Model.Instructors.Where(i => i.ID == ViewBag.InstructorID).Single().LastName;
+            @Html.Raw(first + " " + second  + "'s courses");
+        }
+    </h3>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Department</th>
+        </tr>
+
+        @foreach (var item in Model.Courses)
+        {
+            string selectedRow = "";
+            if (item.CourseID == ViewBag.CourseID)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.ActionLink("Select", "Index", new { courseID = item.CourseID })
+                </td>
+                <td>
+                    @item.CourseID
+                </td>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Department.Name
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+<!-- ******************************************************* -->
+<!-- Show Students enrolled in that Course -->
+<!-- ******************************************************* -->
+@if (Model.Enrollments != null)
+{
+    <h3>
+        @{
+            string courseName = Model.Courses.Where(i => i.CourseID == ViewBag.CourseID).Single().Title;
+            @Html.Raw("Students enrolled in " + courseName);
+        }
+    </h3>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Email</th>
+        </tr>
+        @foreach (var item in Model.Enrollments)
+        {
+            <tr>
+                <td>
+                    @item.Student.FullName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Email)
+                </td>
+            </tr>
+        }
+    </table>
+}

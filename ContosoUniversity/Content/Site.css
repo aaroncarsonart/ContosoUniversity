@@ -1,0 +1,309 @@
+﻿.success{
+    color: black;
+}
+
+tr.success td > a,
+tr.success td > a:active,
+tr.success td > a:hover{
+    color: #FF3D3D;
+}
+
+span.text-danger,
+span.field-validation-error{
+    color: #FF9191;
+}
+
+
+
+/***********************************/
+/* customlink */
+/***********************************/
+a,
+a:active,
+a:hover{
+    color: #FF9191;
+}
+
+a.customlink{
+    color: #FF9191;
+}
+
+a.customlink:link{
+}
+
+a.customlink:focus {
+}
+
+a.customlink:active,
+a.customlink:hover {
+}
+
+/***********************************/
+/* PagedList */
+/***********************************/
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #ffffff;
+  color: #5C0000;
+  border-color: #FF9191;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #eeeeee;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #FFDEDE !important;
+  background-color: #5C0000 !important;
+  border-color: #FF9191;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999999;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+.pager li > a,
+.pager li > span {
+  background-color: #ffffff;
+  color: #5C0000;
+  border-color: #FF9191;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+  background-color: #eeeeee;  
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  color: #999999;
+  background-color: #ffffff;
+}
+
+
+/***********************************/
+/* NAV TABS */
+/***********************************/
+.nav-tabs > li.active {
+    color: #000000;
+    border-color: #000000;
+}
+
+.nav-tabs > li > a:current{
+    background-color: #FFDEDE;
+    color: #5C0000;
+}
+
+.nav-tabs > li > a:focus{
+    background-color: #FFDEDE;
+    color: #5C0000;
+}
+
+.nav-tabs > li > a:hover{
+    background-color: #FFDEDE;
+    color: #5C0000;
+}
+
+
+
+/***********************************/
+/* BODY */
+/***********************************/
+body {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  /* fallback */
+  background-color: #870000;
+  color: #FFFFFF;
+  background: url(images/linear_bg_2.png);
+  background-repeat: repeat-x;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#870000), to(#CF0000));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #870000, #CF0000);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #870000, #CF0000);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #870000, #CF0000);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #870000, #CF0000);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/***********************************/
+/* NAVBAR */
+/***********************************/
+.navbar-default .navbar-brand,
+.navbar-inverse .navbar-brand {
+  color: #FFDEDE;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar .nav > li > a {
+  text-decoration: none;
+  color:  #FFDEDE;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/*Set the background color of the navbar to a different value*/
+.navbar-inverse,
+.navbar-default,
+.dropdown-menu,
+ul.dropdown-menu { 
+  /* fallback */
+  background-color: #5C0000;
+  color: #FFDEDE;
+  border-color: #000000;
+  background: url(images/linear_bg_2.png);
+  background-repeat: repeat-x;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5C0000), to(#000000));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #5C0000, #000000);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #5C0000, #000000);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #5C0000, #000000);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #5C0000, #000000);
+}
+
+.dropdown-menu>li>a{
+  color: #FFDEDE;
+}
+
+.navbar .nav > li.dropdown.open.active > a:hover, 
+.navbar .nav > li.dropdown.open > a
+{
+  /* fallback */
+  color: #FFFFFF;
+  background-color: #870000;
+  border-color: #000000;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#870000), to(#5C0000));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #870000, #5C0000);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #870000, #5C0000);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #870000, #5C0000);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #870000, #5C0000);
+}
+
+
+.nav > li.dropdown.active.open > a, 
+.nav > li.dropdown.active.open > ul.dropdown-menu a:hover,
+.nav > li.dropdown.open > a, 
+.nav > li.dropdown.open > ul.dropdown-menu a:hover{
+    background-color: #FF9191;
+    color: #000000;
+}
+
+
+
+/***********************************/
+/* CUSTOM - VerticalGradient */
+/***********************************/
+#VerticalGradient {
+  /* fallback */
+  background-color: #870000;
+  background: url(images/linear_bg_2.png);
+  background-repeat: repeat-x;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#870000), to(#CF0000));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #870000, #CF0000);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #870000, #CF0000);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #870000, #CF0000);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #870000, #CF0000);
+}
+
+/***********************************/
+/* buttons */
+/***********************************/
+.btn-default {
+  color: #FFE6E6;
+  background-color: #5C0000;
+  border-color: #000000;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #FFFFFF;
+  background-color: #8A0000;
+  border-color: #000000;
+}
+
+#roundedsection{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
